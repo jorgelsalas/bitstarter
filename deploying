@@ -1,0 +1,11 @@
+    git checkout develop
+105 emacs -nw index.html # make edits and save
+106 git commit -a -m "Fixed staging bugs in develop branch."
+107 git push origin develop # push develop commits to github
+108 git checkout staging
+109 git merge develop # merge changes from develop into staging.
+110 git push origin staging # push staging commits to github
+111 git push staging-heroku staging:master # push again to Heroku
+    git checkout master  
+116 git merge staging
+117 git push production-heroku master:master
